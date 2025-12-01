@@ -16,3 +16,17 @@ struct Scores{
         arr[i]=0;
     }
 };
+
+struct Student{
+    string name;
+    int age;
+    Scores scores
+
+    string getName() const{
+        return name;
+    }
+    
+    int getAge() const{
+        return age;
+    }
+};
