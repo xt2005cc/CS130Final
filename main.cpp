@@ -20,7 +20,7 @@ struct Scores{
 struct Student{
     string name;
     int age;
-    Scores scores
+    Scores scores;
 
     string getName() const{
         return name;
@@ -49,7 +49,7 @@ ostream& operator<<(ostream &out, const Student &s){
     for (int i = 0; i < 3; i++){
         out << s.scores.arr[i] << " ";
     }
-    out << "Avg = " << s.scores.avg
+    out << "Avg = " << s.scores.avg;
     return out;
 }
 
@@ -72,5 +72,9 @@ int main(){
         return 1;
     }
 
-    cout << "Reading students"
+    cout << "Reading students.. ";
+    while(ifs >> temp){
+        cout << "Read -> " < temp << endl;
+        stu.push_back(temp);
+    }
 }
